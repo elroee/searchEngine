@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="one.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <title>SearchEngine</title>
+</head>
+
+<body>
+    <section class="content padding mx-auto">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <a href="searchEnginePage.html" class="mx-auto" id="title">SearchEngine</a>
+            </div>
+        </nav>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="addDoc-tab" data-bs-toggle="tab" data-bs-target="#addDoc" type="button"
+                    role="tab" aria-controls="home" aria-selected="true">Add Document</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="lexical-tab" data-bs-toggle="tab" data-bs-target="#lexicalAnalysis"
+                    type="button" role="tab" aria-controls="profile" aria-selected="false">Lexical Analysis</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="stopword-tab" data-bs-toggle="tab" data-bs-target="#stopwordRemoval"
+                    type="button" role="tab" aria-controls="contact" aria-selected="false">Stopword Removal</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="stemming-tab" data-bs-toggle="tab" data-bs-target="#stemming"
+                    type="button" role="tab" aria-controls="profile" aria-selected="false">Stemming</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="extreme-tab" data-bs-toggle="tab" data-bs-target="#extremeRemoval"
+                    type="button" role="tab" aria-controls="contact" aria-selected="false">Extreme Freq. Removal</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="weighting-tab" data-bs-toggle="tab" data-bs-target="#weighting"
+                    type="button" role="tab" aria-controls="contact" aria-selected="false">Weighting</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="finish-tab" data-bs-toggle="tab" data-bs-target="#finish"
+                    type="button" role="tab" aria-controls="contact" aria-selected="false">Finish</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show row active" id="addDoc" role="tabpanel" aria-labelledby="addDoc-tab">
+                <form action="" class="form-group mx-auto p-5">
+                    <label for="documentTitle" class="p-2">Document Title</label>
+                    <input type="text" name="form-control rounded m-2" placeholder="Document Title" id="documentTitle">
+                    <br>
+                    <label for="documentFile" class="p-2">Upload File</label>
+                    <input type="file" name="form-control rounded" id="documentFile">
+                    <br>
+                    <br>
+                    <div class="buttonDiv row">
+                        <a href="" class="btn btn-outline-primary col-md-4 mx-auto" id="lexicalAnalysisPage">Next</a>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade show " id="lexicalAnalysis" role="tabpanel" aria-labelledby="lexical-tab">
+                <label for="numWordsLA">Number of Words:</label>
+                <label for="" id="numWordsLA">0</label>
+                <br>
+                <label for="numWordsRemovedLA">Number of Words Removed:</label>
+                <label for="" id="numWordsRemovedLA">0</label>
+                <div class="buttonDiv row">
+                    <!-- <a href="" class="btn btn-outline-primary col-md-4 mx-auto mb-2" id="lexicalToAddDoc">Prev</a> -->
+                    <a href="" class="btn btn-outline-primary col-md-4 mx-auto mb-2" id="stopwordRemovalPage">Next</a>
+                </div>
+                <table class="table table-dark" id="lexicalAnalysedData">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Word</th>
+                            <th scope="col">Document Frequency</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lexicalAnalysedRow">
+                        <tr>
+                            <!-- <th scope="row">1</th>
+                            <td>Hello</td>
+                            <td>365</td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade show" id="stopwordRemoval" role="tabpanel" aria-labelledby="stopword-tab">
+                <label for="numWordsSR">Number of Words:</label>
+                <label for="" id="numWordsSR">0</label>
+                <br>
+                <label for="numWordsRemovedSR">Number of Words Removed:</label>
+                <label for="" id="numWordsRemovedSR">0</label>
+                <div class="buttonDiv row">
+                    <!-- <a href="" class="btn btn-outline-primary col-md-4 mb-2 mx-auto" id="stopwordToLexical">Prev</a> -->
+                    <a href="" class="btn btn-outline-primary col-md-4 mb-2 mx-auto" id="stemmingPage">Next</a>
+                </div>
+                <table class="table table-dark" id="stopwordRemovedData">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Word</th>
+                            <th scope="col">Document Frequency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- <th scope="row">1</th>
+                            <td>Hello</td>
+                            <td>365</td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="tab-pane fade show" id="stemming" role="tabpanel" aria-labelledby="stemming-tab">
+                <label for="numWordsST">Number of Words:</label>
+                <label for="" id="numWordsST">0</label>
+                <br>
+                <label for="numWordsRemovedST">Number of Words Removed:</label>
+                <label for="" id="numWordsRemovedST">0</label>
+                <div class="buttonDiv row">
+                    <!-- <a href="" class="btn btn-outline-primary col-md-4 mb-2 mx-auto" id="stemmingToStopword">Prev</a> -->
+                    <a href="" class="btn btn-outline-primary col-md-4 mb-2 mx-auto" id="extremePage">Next</a>
+                </div>
+                <table class="table table-dark" id="stemmedData">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Word</th>
+                            <th scope="col">Document Frequency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- <th scope="row">1</th>
+                            <td>Hello</td>
+                            <td>365</td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade show " id="extremeRemoval" role="tabpanel" aria-labelledby="extreme-tab">
+                <label for="numWordsER">Number of Words:</label>
+                <label for="" id="numWordsER">0</label>
+                <br>
+                <label for="numWordsRemovedER">Number of Words Removed:</label>
+                <label for="" id="numWordsRemovedER">0</label>
+                <div class="buttonDiv row">
+                    <!-- <a href="" class="btn btn-outline-primary col-md-4 mx-auto mb-2" id="lexicalToAddDoc">Prev</a> -->
+                    <a href="" class="btn btn-outline-primary col-md-4 mx-auto mb-2" id="weightingPage">Next</a>
+                </div>
+                <table class="table table-dark" id="extremeRemovedData">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Word</th>
+                            <th scope="col">Document Frequency</th>
+                        </tr>
+                    </thead>
+                    <tbody id="extremeRemovedRow">
+                        <tr>
+                            <!-- <th scope="row">1</th>
+                            <td>Hello</td>
+                            <td>365</td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade show" id="weighting" role="tabpanel" aria-labelledby="weighting-tab">
+                <label for="numWords0">Number of Words with Weight 0:</label>
+                <label for="" id="numWords0">0</label>
+                <br>
+                <label for="numWords1">Number of Words with Weight 1:</label>
+                <label for="" id="numWords1">0</label>
+                <div class="buttonDiv row">
+                    <!-- <a href="" class="btn btn-outline-primary col-md-4 mb-2 mx-auto" id="weightingToStemming">Prev</a> -->
+                    <a href="" class="btn btn-outline-primary col-md-4 mb-2 mx-auto" id="finishPage">Finish</a>
+                </div>
+                <table class="table table-dark" id="weightedData">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Word</th>
+                            <th scope="col">Weight</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- <th scope="row">1</th>
+                            <td>Hello</td>
+                            <td>365</td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade show" id="finish" role="tabpanel" aria-labelledby="finish-tab">
+                <div class="message container-fluid row">
+                    <h1 class="mx-auto" id="finished">Indexing Done!</h1>
+                </div>
+                <div class="buttonDiv row">
+                    <a href="indexer.html" class="btn btn-outline-primary col-md-4 mx-auto" id="indexer">Go to Indexer</a>
+                    <a href="searchEnginePage.html" class="btn btn-outline-primary col-md-4 mx-auto" id="homepage">Go to homepage</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

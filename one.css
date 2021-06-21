@@ -1,0 +1,47 @@
+.content{
+    padding: 10%;
+}
+
+.retrievedContents{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+a#title:hover{
+    text-decoration: none;
+}
+
+#title{
+    padding: 20px;
+    font-family: 'Pattaya', sans-serif;
+    font-size: 100px;
+    color: steelblue;
+}
+.more{
+    margin-right: 0;
+}
+
+.retrievedContents{
+    display: none;
+}
+
+#retrievedDocuments>li{
+    font-size: 20px;
+    font-family: 'Pattaya', sans-serif;
+    
+}
+#retrievedDocuments>li:hover{
+    /* border-top: 1px solid steelblue; */
+    border-bottom: 1px solid steelblue;
+}
+
+.retrievedLink:hover{
+    text-decoration: none;
+    color: steelblue;
+    /* text-decoration: underline; */
+}
+
+#finished{
+    font-size: 40px;
+    font-family: 'Pattaya', sans-serif;
+}
